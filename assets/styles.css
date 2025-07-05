@@ -240,7 +240,7 @@ body {
     display: flex;
     flex-flow: column;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100svh;
     font-family: var(--font-family);
     font-feature-settings: var(--font-settings);
     font-variation-settings: var(--font-variation);
