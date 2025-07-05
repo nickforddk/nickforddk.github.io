@@ -1559,7 +1559,7 @@ body {
 
         section {
             &.fullheight {
-                min-height: 100vh;
+                min-height: 100svh;
             }
 
             .sidebar {
@@ -1587,7 +1587,7 @@ body {
         }
 
         section.hero {
-            min-height: 100vh;
+            min-height: 100svh;
             font-family: var(--font-family--title);
             font-feature-settings: var(--font-settings--title);
             font-variation-settings: var(--font-variation--title);
@@ -1597,7 +1597,7 @@ body {
             &.has-background-image {
                 view-timeline-name: --hero-scroll;
                 overflow: hidden;
-                height: 100vh;
+                height: 100svh;
                 clip-path: inset(0px 0px 0px 0px);
 
                 > * {
@@ -1677,7 +1677,7 @@ body {
                 object-fit: cover;
                 animation: hero-scroll 1ms linear both;
                 animation-timeline: scroll();
-                animation-range: var(--int-padding) 100vh;
+                animation-range: var(--int-padding) 100svh;
                 transform-origin: 100% 0%;
 
                 > img {
