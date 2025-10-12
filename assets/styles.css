@@ -3738,60 +3738,62 @@ body {
 }
 
 h1.logo {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    white-space: nowrap;
-    gap: var(--ext-border);
-    line-height: 1;
-    font-weight: 800;
-    font-size: var(--font-size--x-large);
-    color: var(--white);
+    display: contents;
 
     > a {
-        color: inherit !important;
-    }
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        white-space: nowrap;
+        gap: var(--ext-border);
+        line-height: 1;
+        font-weight: 800;
+        font-size: var(--font-size--x-large);
+        color: var(--white) !important;
 
-    &::before {
-        content: '';
-        display: block;
-        height: 1lh;
-        width: 1lh;
-        clip-path: inset(0px 0px 0px 0px round 0.5lh);
-        mask-image: 
-            linear-gradient(45deg, var(--black) 50%, var(--black-00) 50%),
-            linear-gradient(45deg, var(--black-00) 50%, var(--black) 50%),
-            var(--logo-element--n),
-            var(--logo-element--f);
-        mask-composite: add, intersect, add;
-        mask-position: 0% 100%, 100% 0%, 0% 100%, 100% 0%;
-        mask-size: 0.95lh 0.95lh, 0.95lh 0.95lh, 1lh 1lh, 1lh 1lh;
-        mask-repeat: no-repeat;
-        background-image:
-            linear-gradient(45deg, var(--ncol) 50%, var(--fcol) 50%), 
-            linear-gradient(45deg, var(--fcol) 50%, var(--fcol) 50%);
-        background-color: var(--fcol);
-        background-size: 1lh 1lh;
-        background-position: 0% 0%, 1lh 0%;
-        background-repeat: no-repeat;
-        transition: all 0.2s ease;
-    }
-                
-    &:hover {
-        color: var(--ncol);
+        &::before {
+            content: '';
+            display: block;
+            height: 1lh;
+            width: 1lh;
+            clip-path: inset(0px 0px 0px 0px round 0.5lh);
+            mask-image: 
+                linear-gradient(45deg, var(--black) 50%, var(--black-00) 50%),
+                linear-gradient(45deg, var(--black-00) 50%, var(--black) 50%),
+                var(--logo-element--n),
+                var(--logo-element--f);
+            mask-composite: add, intersect, add;
+            mask-position: 0% 100%, 100% 0%, 0% 100%, 100% 0%;
+            mask-size: 0.95lh 0.95lh, 0.95lh 0.95lh, 1lh 1lh, 1lh 1lh;
+            mask-repeat: no-repeat;
+            background-image:
+                linear-gradient(45deg, var(--ncol) 50%, var(--fcol) 50%), 
+                linear-gradient(45deg, var(--fcol) 50%, var(--fcol) 50%);
+            background-color: var(--fcol);
+            background-size: 1lh 1lh;
+            background-position: 0% 0%, 1lh 0%;
+            background-repeat: no-repeat;
+            transition: all 0.2s ease;
+        }
+                    
+        &:hover {
+            color: var(--ncol);
+            text-decoration: 0.075em underline var(--blue-half);
+            text-underline-offset: 0.125em;
 
-        @media only screen and (min-width: 300px) {                    
-            &::before {
-                --fcol: var(--ncol);
-                clip-path: inset(0px 0px 0px 0px round 0px);
-                width: 2lh;
-                mask-size: 1lh 1lh, 2lh 2lh, 1lh 1lh, 1lh 1lh;
+            @media only screen and (min-width: 300px) {                    
+                &::before {
+                    --fcol: var(--ncol);
+                    clip-path: inset(0px 0px 0px 0px round 0px);
+                    width: 2lh;
+                    mask-size: 1lh 1lh, 2lh 2lh, 1lh 1lh, 1lh 1lh;
+                }
             }
         }
-    }
 
-    @media (min-width: 800px) {
-        font-size: var(--font-size--giant);
-        justify-content: center;
+        @media (min-width: 800px) {
+            font-size: var(--font-size--giant);
+            justify-content: center;
+        }
     }
 }
