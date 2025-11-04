@@ -1,0 +1,15 @@
+<header>
+    <h1 class="w-full sm:max-w-md">
+        <a href = "#" class="text-blue-800 hover:text-blue-700 dark:text-white dark:hover:decoration-blue-600 hover:dark:text-white before:text-cyan-500">{{ name }}</a>
+    </h1>
+    <p class="w-full sm:max-w-md text-md sm:text-base/[1.5] flex-[0.5] mt-[1vw] sm:mt-0">
+        {% for d in description %}
+            <span class="block not-last-of-type:after:content-[',']">{{ d }}</span>
+        {% endfor %}
+    </p>
+    <nav class="w-full sm:max-w-md mb-4 sm:mb-0 text-base sm:text-sm flex flex-col sm:flex-row sm:flex-wrap justify-stretch gap-2">
+        {% for link in headerLinks %}
+            <a href="{{ link.url }}" id="{{ link.id }}" class="pill">{{ link.title }}</a>
+        {% endfor %}
+    </nav>
+</header>

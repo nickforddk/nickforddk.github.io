@@ -1,0 +1,9 @@
+User's request is to generate the contents of the file: /yaml-static-site/yaml-static-site/public/robots.txt
+
+User's project structure indicates that this file is intended to provide instructions for web crawlers.
+
+Here are the contents for the robots.txt file:
+
+User-agent: *
+Disallow: /private/
+Allow: /

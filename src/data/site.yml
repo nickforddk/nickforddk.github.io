@@ -1,0 +1,62 @@
+title: Lab
+name: Nick Ford
+description:
+  en: [Assistant professor, Department of Economics, University of Southern Denmark (SDU)]
+  da: [Adjunkt, Økonomisk Institut, Syddansk Universitet]
+header-links:
+  - id: home
+    en: 
+    - title: Website
+    - url: https://www.nickford.com
+    da: 
+    - title: Hjemmeside
+    - url: https://www.nickford.dk
+  - id: git
+    title: GitHub
+    url: https://github.com/nickforddk
+  - id: sdu 
+    en: 
+    - title: SDU profile
+    - url: https://portal.findresearcher.sdu.dk/en/persons/nicholas-martin-ford-2
+    da:
+    - title: SDU forskerprofil
+    - url: https://portal.findresearcher.sdu.dk/da/persons/nicholas-martin-ford-2
+projects:
+  - id: kv150
+    category: outreach
+    repo: KvinderKU-1875-1925
+    img: images/kv150.webp
+    en: 
+    - title: "Female graduates: 1875-1925"
+    - description: Digital exhibition about the first women to graduate from the University of Copenhagen
+    da: 
+    - title: "Kvindelige kandidater: 1875-1925"
+    - description: Interaktiv udstilling over de første kvindelige studerende på Københavns Universitet
+  - id: peb
+    category: teaching
+    title: Perspectives on economic behaviour
+    repo: peb
+    img: images/peb.webp
+    en: 
+    - description: Supplementary course materials for my undergraduate course at the University of Southern Denmark
+    da: 
+    - description: Supplerende kursusmateriale til mit bachelorfag på Syddansk Universitet
+categories:
+  - id: outreach
+    en: Outreach
+    da: Formidling
+  - id: teaching
+    en: Teaching
+    da: Undervisning
+  - id: research
+    en: Research
+    da: Forskning
+  - id: personal
+    en: Personal
+    da: Personligt
+  - id: coding
+    en: Coding
+    da: Kodning
+  - id: other
+    en: Other
+    da: Andet

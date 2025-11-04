@@ -1,0 +1,41 @@
+{
+  "name": "yaml-static-site",
+  "version": "1.0.0",
+  "description": "A static site generator using YAML for configuration and Tailwind CSS for styling, supporting English and Danish languages.",
+  "main": "src/app.ts",
+  "scripts": {
+    "build": "tsc && node dist/app.js",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts",
+    "precss:build": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path .\\public\\styles | Out-Null\"",
+    "css:build": "postcss ./src/styles/index.css -o ./public/styles/index.css --config ./postcss.config.mjs",
+    "css:watch": "postcss ./src/styles/index.css -o ./public/styles/index.css --config ./postcss.config.mjs --watch",
+    "styles:copy": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path .\\public\\styles | Out-Null; Copy-Item -Force .\\src\\styles\\styles.css .\\public\\styles\\styles.css\"",
+    "styles:watch": "powershell -NoProfile -Command \"while ($true) { Copy-Item -Force .\\src\\styles\\styles.css .\\public\\styles\\styles.css; Start-Sleep -Seconds 1 }\"",
+    "static:build": "npm run css:build && npm run styles:copy && ts-node scripts/build-static.ts"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nunjucks": "^3.2.4",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
+    "@types/express": "^5.0.5",
+    "@types/nunjucks": "^3.2.6",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  },
+  "keywords": [
+    "static-site",
+    "yaml",
+    "tailwindcss",
+    "internationalization"
+  ],
+  "author": "Nick Ford",
+  "license": "MIT"
+}

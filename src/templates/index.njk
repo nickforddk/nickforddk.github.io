@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    {% include 'partials/head.njk' %}
+</head>
+<body class="gh">
+    {% include 'partials/header.njk' %}
+    <main class="w-full h-screenclip sm:h-screen p-0 pb-[1.5rem] sm:pb-0 drop-shadow-xl">
+        <!-- Carousel -->
+        <section
+          class="relative overflow-hidden max-w-full p-0 pb-[2.5rem] sm:pb-0"
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="{{ projectsTitle }}"
+          data-carousel
+          data-interval="6000"
+        >
+          <!-- Track -->
+          <div class="h-screenclip sm:h-screen flex flex-row gap-0 transition-transform duration-500 ease-in-out" data-carousel-track>
+            {% for project in projects %}
+              <div
+                class="flex w-full h-full p-4 sm:p-8 m-0 shrink-0"
+                role="group"
+                category="{{ project.category }}"
+                aria-roledescription="slide"
+                aria-label="{{ loop.index }} of {{ loop.length }}"
+                data-carousel-slide
+              >
+                <a href="{{ project.repo }}"
+                    class="group/item no-underline flex flex-1 max-w-xl mx-auto text-sm bg-white text-grey-500 dark:bg-blue-900 dark:text-grey-400 hover:text-blue-800 hover:dark:text-white relative"
+                    style="clip-path: inset(0px round var(--radius-xl))">
+                  <div class="pcover flex h-full max-h-1/2 mb-2 text-cyan-100 bg-grey-400 dark:text-grey-500 dark:bg-grey-600 group-hover/item:text-white group-hover/item:dark:text-grey-400">
+                    {% if project.img %}<img src="{{ project.img }}" alt="{{ project.title }}" class="flex-1 object-cover m-0">{% endif %}
+                  </div>
+                  <div class="text-xs font-semibold font-title-features rounded-1lh leading-none px-2 py-1 w-auto absolute top-4 left-4 z-10 bg-grey-500 text-white group-hover/item:bg-blue-700 group-hover/item:dark:bg-cyan-500 shadow-lg border-xs border-grey-500/25">{{ project.categoryLabel }}</div>
+                  <h3 class="text-lg leading-none px-4 text-blue-800 dark:text-white group-hover/item:text-blue-700 group-hover/item:dark:text-cyan-500">
+                    {{ project.title }}
+                  </h3>
+                  <p class="px-4 pb-8">{{ project.description }}</p>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Arrows -->
+          <button
+            type="button"
+            class="btn-prev-arrow w-[2rem] h-[2rem] flex p-0 items-center justify-center absolute z-5 left-[1rem] 2xl:left-[2rem] bottom-[0.5rem] sm:bottom-1/2 sm:translate-y-1/2 rounded-full sm:shadow btn-subtle focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Previous slide"
+            data-carousel-prev
+          >
+          </button>
+          <button
+            type="button"
+            class="btn-next-arrow w-[2rem] h-[2rem] flex p-0 items-center justify-center absolute z-5 right-[1rem] 2xl:right-[2rem] bottom-[0.5rem] sm:bottom-1/2 sm:translate-y-1/2 rounded-full sm:shadow btn-subtle focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Next slide"
+            data-carousel-next
+          >
+          </button>
+
+          <!-- Dots -->
+          <nav
+            class="absolute h-[2rem] bottom-[0.5rem] sm:bottom-0 inset-x-0 flex flex-row items-center justify-center gap-2"
+            data-carousel-dots
+            aria-label="Select slide"
+          ></nav>
+        </section>
+    </main>
+
+    <!-- Carousel script -->
+    <script src="/assets/carousel.js" defer></script>
+</body>
+</html>
