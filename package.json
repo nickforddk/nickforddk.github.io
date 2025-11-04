@@ -7,11 +7,11 @@
     "build": "tsc && node dist/app.js",
     "start": "node dist/app.js",
     "dev": "ts-node src/app.ts",
-    "precss:build": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path .\\public\\styles | Out-Null\"",
+    "precss:build": "node -e \"require('fs').mkdirSync('public/styles', { recursive: true })\"",
     "css:build": "postcss ./src/styles/index.css -o ./public/styles/index.css --config ./postcss.config.mjs",
     "css:watch": "postcss ./src/styles/index.css -o ./public/styles/index.css --config ./postcss.config.mjs --watch",
-    "styles:copy": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path .\\public\\styles | Out-Null; Copy-Item -Force .\\src\\styles\\styles.css .\\public\\styles\\styles.css\"",
-    "styles:watch": "powershell -NoProfile -Command \"while ($true) { Copy-Item -Force .\\src\\styles\\styles.css .\\public\\styles\\styles.css; Start-Sleep -Seconds 1 }\"",
+    "styles:copy": "node -e \"const fs=require('fs');fs.mkdirSync('public/styles',{recursive:true});fs.copyFileSync('src/styles/styles.css','public/styles/styles.css')\"",
+    "styles:watch": "node -e \"const fs=require('fs');const src='src/styles/styles.css';const dest='public/styles/styles.css';fs.mkdirSync('public/styles',{recursive:true});let last=0;setInterval(()=>{try{const m=fs.statSync(src).mtimeMs;if(m!==last){fs.copyFileSync(src,dest);last=m;}}catch{}},1000)\"",
     "static:build": "npm run css:build && npm run styles:copy && ts-node scripts/build-static.ts"
   },
   "dependencies": {
