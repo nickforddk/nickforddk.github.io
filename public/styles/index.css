@@ -48,7 +48,6 @@
     --color-cyan-700: var(--cyan-pr);
     --color-grey-700: var(--grey-pr);
     --color-blue-800: var(--blue-d);
-    --color-cyan-800: var(--cyan-d);
     --color-grey-800: var(--grey-d);
     --color-blue-900: oklch(from var(--blue) 10% calc(c / 3) h);
     --color-grey-900: oklch(from var(--grey) 10% calc(c / 3) h);
@@ -1170,7 +1169,7 @@ body.gh {
     animation-range: 0vh 50vh;
     width: 100%;
     min-height: calc(2rem + var(--font-size--large));
-    height: 100lvh;
+    height: 100dvh;
     padding-bottom: 0px;
     transition: all 0.2s ease;
     display: flex;
