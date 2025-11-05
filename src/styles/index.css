@@ -411,7 +411,7 @@ body.gh {
         transition: inherit;
       }
 
-      &:hover {
+      &:hover, &:focus {
         text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
 
         &::before {
@@ -551,7 +551,7 @@ div[category] {
     mask-repeat: no-repeat;
     transition: inherit;
   }
-  &:hover {
+  &:hover, &:focus {
     &::after {
         scale: 1.5;
         mask-size: 0lh 0lh, 0.2lh 0.4lh, 0.75lh 0.75lh;

@@ -538,6 +538,11 @@
       }
     }
   }
+  .focus\:text-blue-700 {
+    &:focus {
+      color: var(--color-blue-700);
+    }
+  }
   .focus\:ring-2 {
     &:focus {
       --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
@@ -553,6 +558,14 @@
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
+    }
+  }
+  .focus\:before\:text-inherit {
+    &:focus {
+      &::before {
+        content: var(--tw-content);
+        color: inherit;
+      }
     }
   }
   .sm\:bottom-0 {
@@ -700,12 +713,10 @@
       }
     }
   }
-  .dark\:hover\:decoration-blue-600 {
-    @media (prefers-color-scheme: dark) {
-      &:hover {
-        @media (hover: hover) {
-          text-decoration-color: var(--color-blue-600);
-        }
+  .focus\:dark\:text-white {
+    &:focus {
+      @media (prefers-color-scheme: dark) {
+        color: var(--color-white);
       }
     }
   }
@@ -1275,7 +1286,7 @@ body.gh {
         clip-path: inset(0px 0px 0px 0px round 0.5lh);
         transition: inherit;
       }
-      &:hover {
+      &:hover, &:focus {
         text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
         &::before {
           min-width: 2lh;
@@ -1400,7 +1411,7 @@ div[category] {
     mask-repeat: no-repeat;
     transition: inherit;
   }
-  &:hover {
+  &:hover, &:focus {
     &::after {
       scale: 1.5;
       mask-size: 0lh 0lh, 0.2lh 0.4lh, 0.75lh 0.75lh;
