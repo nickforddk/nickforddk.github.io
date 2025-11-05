@@ -384,6 +384,7 @@ body.gh {
       align-items: center;
       gap: 1rem;
       line-height: 1;
+      text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
 
       &::before {
         content: "";
@@ -410,12 +411,15 @@ body.gh {
         transition: inherit;
       }
 
-      &:hover::before {
+      &:hover {
         color: light-dark(var(--color-blue-700), var(--color-white));
-        min-width: 2lh;
-        width: 2lh;
-        clip-path: inset(0px 0px 0px 0px round 0px);
-        mask-size: 1lh 1lh, 2lh 2lh, 1lh 1lh, 1lh 1lh;
+
+        ::before {
+          min-width: 2lh;
+          width: 2lh;
+          clip-path: inset(0px 0px 0px 0px round 0px);
+          mask-size: 1lh 1lh, 2lh 2lh, 1lh 1lh, 1lh 1lh;
+        }
       }
     }
   }

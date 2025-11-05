@@ -376,12 +376,6 @@
       border-color: color-mix(in oklab, var(--color-grey-500) 25%, transparent);
     }
   }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
-  }
-  .bg-gray-300 {
-    background-color: var(--color-gray-300);
-  }
   .bg-grey-400 {
     background-color: var(--color-grey-400);
   }
@@ -519,13 +513,6 @@
       &::after {
         --tw-content: ',';
         content: var(--tw-content);
-      }
-    }
-  }
-  .hover\:bg-gray-500 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-500);
       }
     }
   }
@@ -1257,6 +1244,7 @@ body.gh {
       align-items: center;
       gap: 1rem;
       line-height: 1;
+      text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
       &::before {
         content: "";
         mask-image: linear-gradient(45deg, #FFFFFF 50%, #FFFFFF00 50%),
@@ -1279,12 +1267,14 @@ body.gh {
         clip-path: inset(0px 0px 0px 0px round 0.5lh);
         transition: inherit;
       }
-      &:hover::before {
+      &:hover {
         color: light-dark(var(--color-blue-700), var(--color-white));
-        min-width: 2lh;
-        width: 2lh;
-        clip-path: inset(0px 0px 0px 0px round 0px);
-        mask-size: 1lh 1lh, 2lh 2lh, 1lh 1lh, 1lh 1lh;
+        ::before {
+          min-width: 2lh;
+          width: 2lh;
+          clip-path: inset(0px 0px 0px 0px round 0px);
+          mask-size: 1lh 1lh, 2lh 2lh, 1lh 1lh, 1lh 1lh;
+        }
       }
     }
   }
