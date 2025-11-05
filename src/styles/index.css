@@ -323,17 +323,17 @@ body.gh {
     @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
       animation: mobile-header-collapse 1ms linear both;
       animation-timeline: scroll();
-      animation-range: 0vh 100vh;
+      animation-range: 0vh 100svh;
 
       > *:not(h1), &::before, &::after {
         animation: mobile-header-hide 1ms linear both;
         animation-timeline: scroll();
-        animation-range: 0vh 100vh;
+        animation-range: 0vh 100svh;
       }
       > h1 {
         animation: mobile-header-h1 1ms linear both;
         animation-timeline: scroll();
-        animation-range: 0vh 50vh;
+        animation-range: 0vh 50svh;
       }
     }
 
@@ -345,7 +345,7 @@ body.gh {
       left: 0px;
       top: 0px;
       width: 100vw;
-      height: 100vh;
+      height: 100svh;
       clip-path: circle(50% at 50% 25%);
       background: light-dark(var(--color-blue-100), var(--color-blue-900));
       mask-image: 
@@ -504,11 +504,11 @@ div[category] {
       height: 100%;
       background: radial-gradient(circle at center, currentColor, var(--white-00));
       background-attachment: scroll;
-      background-size: max(100%, 100vh) max(100%, 100vh);
+      background-size: max(100%, 100lvh) max(100%, 100lvh);
       background-position: 100% 0%;
       mask-image: var(--cat-icon);
       mask-repeat: no-repeat;
-      mask-size: max(100vh, 50vw);
+      mask-size: max(100lvh, 50vw);
       mask-position: center;
       backdrop-filter: blur(0.25rem);
     }
@@ -570,7 +570,7 @@ div[category] {
   100% {
     padding-top: 0px;
     /*height: calc(2rem + var(--font-size--large));*/
-    height: 25vh;
+    height: 25svh;
     background: light-dark(var(--white), var(--blue-pr));
   }
 }
@@ -586,10 +586,10 @@ div[category] {
 @keyframes mobile-header-hide {
   0% {
     opacity: 1;
-    translate: 0px 0vh;
+    translate: 0px 0svh;
   }
   100% {
     opacity: 0;
-    translate: 0px -100vh;
+    translate: 0px -100svh;
   }
 }
