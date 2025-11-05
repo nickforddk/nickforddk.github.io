@@ -415,7 +415,7 @@ body.gh {
       &:hover {
         text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
       }
-      &:hover, &:focus, &:active {
+      &:hover, &:active {
         &::before {
           color: inherit;
           min-width: 2lh;
