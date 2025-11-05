@@ -568,6 +568,11 @@
       }
     }
   }
+  .active\:text-blue-700 {
+    &:active {
+      color: var(--color-blue-700);
+    }
+  }
   .sm\:bottom-0 {
     @media (width >= 40rem) {
       bottom: calc(var(--spacing) * 0);
@@ -715,6 +720,13 @@
   }
   .focus\:dark\:text-white {
     &:focus {
+      @media (prefers-color-scheme: dark) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .active\:dark\:text-white {
+    &:active {
       @media (prefers-color-scheme: dark) {
         color: var(--color-white);
       }
@@ -1286,9 +1298,10 @@ body.gh {
         clip-path: inset(0px 0px 0px 0px round 0.5lh);
         transition: inherit;
       }
-      &:hover, &:focus {
+      &:hover, &:focus, &:active {
         text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
         &::before {
+          color: inherit;
           min-width: 2lh;
           width: 2lh;
           clip-path: inset(0px 0px 0px 0px round 0px);
@@ -1377,23 +1390,29 @@ div[category] {
       mask-repeat: no-repeat;
       mask-size: max(100lvh, 50vw);
       mask-position: center;
-      backdrop-filter: blur(0.25rem);
+      @media (hover:hover) {
+        backdrop-filter: blur(0.25rem);
+      }
     }
     img {
-      filter: saturate(0.5) contrast(0.75);
       mask-image: radial-gradient(circle at 50% 0%, var(--black) 50%, var(--black-50) 150%);
       mask-size: contain;
       mask-repeat: no-repeat;
       transition: inherit;
-      scale: 1.05;
+      @media (hover:hover) {
+        filter: saturate(0.5) contrast(0.75);
+        scale: 1.05;
+      }
     }
   }
-  a:hover .pcover img {
-    filter: saturate(1) contrast(1);
-    scale: 1;
-  }
-  a:hover .pcover::before {
-    backdrop-filter: blur(0rem);
+  @media (hover:hover) {
+    a:hover .pcover img {
+      filter: saturate(1) contrast(1);
+      scale: 1;
+    }
+    a:hover .pcover::before {
+      backdrop-filter: blur(0rem);
+    }
   }
 }
 .btn-next-arrow,
