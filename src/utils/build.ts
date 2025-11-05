@@ -56,7 +56,7 @@ function normalizeLangBlock<T extends object>(v: unknown): Partial<T> {
 const isExternal = (u: string) => /^([a-z][a-z0-9+.-]*:|\/\/|#)/i.test(u);
 const toRootAbsolute = (u: string) => (u?.startsWith('/') ? u : `/${u}`);
 const toAssetUrl = (u?: string) =>
-  u ? (u.startsWith('/') ? u : `/assets/${u.replace(/^(\.\/)?/, '')}`) : '';
+  u ? (u.startsWith('/') ? u : `/${u.replace(/^(\.\/)?/, '')}`) : '';
 
 const toViewModel = (data: SiteYaml, lang: SupportedLang) => {
   const headerLinks = (data['header-links'] || [])
@@ -97,7 +97,7 @@ const toViewModel = (data: SiteYaml, lang: SupportedLang) => {
       category: resolvedCategoryId,
       categoryLabel,
       description: loc.description ?? '',
-      img: toAssetUrl(p.img),             // ensure /assets/… for images
+      img: toAssetUrl(p.img),
       url: isExternal(p.url) ? p.url : toRootAbsolute(p.url)
     };
   });

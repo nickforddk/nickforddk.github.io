@@ -1168,9 +1168,6 @@ body.gh {
     background: light-dark(var(--white), var(--dark));
     color: light-dark(var(--dark), var(--white));
     box-shadow: 0px 0px var(--shadow) var(--shadow-color);
-    animation: mobile-header-collapse 1ms linear both;
-    animation-timeline: scroll();
-    animation-range: 0vh 50vh;
     width: 100%;
     min-height: calc(2rem + var(--font-size--large));
     height: 100dvh;
@@ -1180,15 +1177,20 @@ body.gh {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    > *:not(h1), &::before, &::after {
-      animation: mobile-header-hide 1ms linear both;
+    @supports (animation-timeline: scroll()) {
+      animation: mobile-header-collapse 1ms linear both;
       animation-timeline: scroll();
       animation-range: 0vh 50vh;
-    }
-    > h1 {
-      animation: mobile-header-h1 1ms linear both;
-      animation-timeline: scroll();
-      animation-range: 0vh 25vh;
+      > *:not(h1), &::before, &::after {
+        animation: mobile-header-hide 1ms linear both;
+        animation-timeline: scroll();
+        animation-range: 0vh 50vh;
+      }
+      > h1 {
+        animation: mobile-header-h1 1ms linear both;
+        animation-timeline: scroll();
+        animation-range: 0vh 25vh;
+      }
     }
     &::before {
       display: flex;
@@ -1218,9 +1220,6 @@ body.gh {
       mask-repeat: no-repeat;
       mask-size: contain;
       mask-position: center;
-      animation: mobile-header-hide 1ms linear both, var(--animate-bounce);
-      animation-timeline: scroll(), none;
-      animation-range: 0vh 50vh, normal;
     }
     > h1 {
       position: sticky;
@@ -1290,7 +1289,7 @@ body.gh {
         display: none;
       }
       > * {
-        animation: unset;
+        animation: unset !important;
       }
       > h1 {
         font-size: 3rem;
