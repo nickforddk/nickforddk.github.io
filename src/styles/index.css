@@ -320,7 +320,7 @@ body.gh {
     align-items: center;
     justify-content: center;
 
-    @supports (animation-timeline: scroll()) {
+    @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
       animation: mobile-header-collapse 1ms linear both;
       animation-timeline: scroll();
       animation-range: 0vh 50vh;
