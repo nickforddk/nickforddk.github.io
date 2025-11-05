@@ -448,7 +448,7 @@ body.gh {
       }
 
       > h1 {
-        font-size: 3rem;
+        font-size: min(5vw, 3rem);
       }
     }
   }
