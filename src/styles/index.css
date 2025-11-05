@@ -416,6 +416,7 @@ body.gh {
         text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
 
         &::before {
+          background-color: currentColor;
           min-width: 2lh;
           width: 2lh;
           clip-path: inset(0px 0px 0px 0px round 0px);
