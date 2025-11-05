@@ -528,16 +528,6 @@
       }
     }
   }
-  .hover\:before\:text-inherit {
-    &:hover {
-      @media (hover: hover) {
-        &::before {
-          content: var(--tw-content);
-          color: inherit;
-        }
-      }
-    }
-  }
   .focus\:text-blue-700 {
     &:focus {
       color: var(--color-blue-700);
@@ -558,14 +548,6 @@
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
-    }
-  }
-  .focus\:before\:text-inherit {
-    &:focus {
-      &::before {
-        content: var(--tw-content);
-        color: inherit;
-      }
     }
   }
   .active\:text-blue-700 {
@@ -1298,8 +1280,10 @@ body.gh {
         clip-path: inset(0px 0px 0px 0px round 0.5lh);
         transition: inherit;
       }
-      &:hover, &:focus, &:active {
+      &:hover {
         text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
+      }
+      &:hover, &:focus, &:active {
         &::before {
           color: inherit;
           min-width: 2lh;
