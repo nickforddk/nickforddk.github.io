@@ -42,8 +42,8 @@
       slides.forEach((s, i) => s.setAttribute('aria-hidden', String(i !== index)));
       if (dots) {
         Array.from(dots.querySelectorAll('button')).forEach((b, i) => {
-          b.classList.toggle('bg-blue-600', i === index);
-          b.classList.toggle('bg-gray-300', i !== index);
+          b.classList.toggle('pointer-events-none', i === index);
+          b.classList.toggle('btn-neutral', i !== index);
           b.setAttribute('aria-current', i === index ? 'true' : 'false');
         });
       }
@@ -71,7 +71,7 @@
       slides.forEach((_, i) => {
         const b = document.createElement('button');
         b.type = 'button';
-        b.className = 'h-2 w-2 rounded-full bg-gray-300 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500';
+        b.className = 'h-2 w-2 min-w-2 min-h-2 p-0 flex-0 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 pointer-events-none';
         b.setAttribute('aria-label', `Go to slide ${i + 1}`);
         b.addEventListener('click', () => goTo(i));
         dots.appendChild(b);
