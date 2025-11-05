@@ -384,7 +384,7 @@ body.gh {
       align-items: center;
       gap: 1rem;
       line-height: 1;
-      text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
+      text-decoration-color: light-dark(var(--white-00), var(--black-00));
 
       &::before {
         content: "";
@@ -413,8 +413,9 @@ body.gh {
 
       &:hover {
         color: light-dark(var(--color-blue-700), var(--color-white));
+        text-decoration-color: light-dark(var(--color-grey-200), var(--color-blue-600));
 
-        ::before {
+        &::before {
           min-width: 2lh;
           width: 2lh;
           clip-path: inset(0px 0px 0px 0px round 0px);
