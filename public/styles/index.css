@@ -1176,8 +1176,9 @@ body.gh {
   background-color: light-dark(var(--white), var(--dark));
   background-image: var(--gradient--light);
   background-attachment: fixed;
-  background-size: 100vw 100svh;
+  background-size: 100vw 100lvh;
   background-position: center top;
+  background-repeat: no-repeat;
   min-height: 100svh;
   height: 100%;
   @media (prefers-color-scheme: dark) {
