@@ -323,17 +323,17 @@ body.gh {
     @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
       animation: mobile-header-collapse 1ms linear both;
       animation-timeline: scroll();
-      animation-range: 0vh 50vh;
+      animation-range: 0vh 100vh;
 
       > *:not(h1), &::before, &::after {
         animation: mobile-header-hide 1ms linear both;
         animation-timeline: scroll();
-        animation-range: 0vh 50vh;
+        animation-range: 0vh 100vh;
       }
       > h1 {
         animation: mobile-header-h1 1ms linear both;
         animation-timeline: scroll();
-        animation-range: 0vh 25vh;
+        animation-range: 0vh 50vh;
       }
     }
 
