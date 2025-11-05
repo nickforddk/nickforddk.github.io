@@ -24,7 +24,7 @@ header-links:
 projects:
   - id: kv150
     category: outreach
-    repo: KvinderKU-1875-1925
+    url: KvinderKU-1875-1925
     img: images/kv150.webp
     en: 
     - title: "Female graduates: 1875-1925"
@@ -35,12 +35,12 @@ projects:
   - id: peb
     category: teaching
     title: Perspectives on economic behaviour
-    repo: peb
+    url: peb
     img: images/peb.webp
     en: 
     - description: Supplementary course materials for my undergraduate course at the University of Southern Denmark
     da: 
-    - description: Supplerende kursusmateriale til mit bachelorfag på Syddansk Universitet
+    - description: Supplerende undervisningsmateriale til et af de fag, jeg underviser i på Syddansk Universitet
 categories:
   - id: outreach
     en: Outreach

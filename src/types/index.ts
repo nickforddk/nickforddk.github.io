@@ -6,8 +6,10 @@ interface HeaderLink {
 
 interface ObjectItem {
     title: string;
-    repo: string;
+    url: string;
     description: string;
+    img: string;
+    category: string;
 }
 
 interface SiteConfig {

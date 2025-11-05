@@ -26,7 +26,7 @@
                 aria-label="{{ loop.index }} of {{ loop.length }}"
                 data-carousel-slide
               >
-                <a href="{{ project.repo }}"
+                <a href="{{ project.url }}"
                     class="group/item no-underline flex flex-1 max-w-xl mx-auto text-sm bg-white text-grey-500 dark:bg-blue-900 dark:text-grey-400 hover:text-blue-800 hover:dark:text-white relative"
                     style="clip-path: inset(0px round var(--radius-xl))">
                   <div class="pcover flex h-full max-h-1/2 mb-2 text-cyan-100 bg-grey-400 dark:text-grey-500 dark:bg-grey-600 group-hover/item:text-white group-hover/item:dark:text-grey-400">
@@ -60,7 +60,7 @@
 
           <!-- Dots -->
           <nav
-            class="absolute h-[2rem] bottom-[0.5rem] sm:bottom-0 inset-x-0 flex flex-row items-center justify-center gap-2"
+            class="absolute mx-auto h-[2rem] bottom-[0.5rem] sm:bottom-0 inset-x-0 flex flex-row items-center justify-center gap-2"
             data-carousel-dots
             aria-label="Select slide"
           ></nav>

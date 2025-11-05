@@ -24,7 +24,7 @@ type ProjectYaml = {
   id?: string;
   title?: string; // global fallback
   img?: string; // global fallback
-  repo: string;
+  url: string;
   category?: string; // category id
   en?: unknown;   // [{ title?: string }, { description?: string }]
   da?: unknown;   // [{ title?: string }, { description?: string }]
@@ -53,6 +53,11 @@ function normalizeLangBlock<T extends object>(v: unknown): Partial<T> {
   return (v && typeof v === 'object') ? (v as Partial<T>) : {};
 }
 
+const isExternal = (u: string) => /^([a-z][a-z0-9+.-]*:|\/\/|#)/i.test(u);
+const toRootAbsolute = (u: string) => (u?.startsWith('/') ? u : `/${u}`);
+const toAssetUrl = (u?: string) =>
+  u ? (u.startsWith('/') ? u : `/assets/${u.replace(/^(\.\/)?/, '')}`) : '';
+
 const toViewModel = (data: SiteYaml, lang: SupportedLang) => {
   const headerLinks = (data['header-links'] || [])
     .map(link => {
@@ -61,7 +66,8 @@ const toViewModel = (data: SiteYaml, lang: SupportedLang) => {
       const loc = lang === 'da' ? (Object.keys(da).length ? da : undefined) : (Object.keys(en).length ? en : undefined);
       const title = loc?.title ?? link.title ?? '';
       const id = loc?.id ?? link.id ?? '';
-      const url = loc?.url ?? link.url ?? '';
+      const rawUrl = loc?.url ?? link.url ?? '';
+      const url = isExternal(rawUrl) ? rawUrl : toRootAbsolute(rawUrl);
       return title && id && url ? { title, id, url } : null;
     })
     .filter(Boolean) as { title: string; id: string; url: string }[];
@@ -87,12 +93,12 @@ const toViewModel = (data: SiteYaml, lang: SupportedLang) => {
     const categoryLabel = labelRec ? labelRec[lang] : (lang === 'da' ? 'Andet' : 'Other');
 
     return {
-      title: loc.title ?? p.title ?? p.id ?? p.repo,
-      category: resolvedCategoryId,   // id is 'other' if no match
-      categoryLabel,                  // localized label
+      title: loc.title ?? p.title ?? p.id ?? p.url,
+      category: resolvedCategoryId,
+      categoryLabel,
       description: loc.description ?? '',
-      img: p.img ?? '',
-      repo: p.repo
+      img: toAssetUrl(p.img),             // ensure /assets/… for images
+      url: isExternal(p.url) ? p.url : toRootAbsolute(p.url)
     };
   });
 
