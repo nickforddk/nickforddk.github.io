@@ -1397,6 +1397,7 @@ body.gh {
         font-size: min(5vw, 3rem);
         > a {
           scale: 1;
+          gap: 1rem;
         }
       }
     }

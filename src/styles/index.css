@@ -523,6 +523,7 @@ body.gh {
 
         > a {
           scale: 1;
+          gap: 1rem;
         }
       }
     }
