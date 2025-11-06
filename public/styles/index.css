@@ -1211,7 +1211,7 @@ body.gh {
       > h1 {
         animation: mobile-header-h1 1ms linear both;
         animation-timeline: scroll();
-        animation-range: normal;
+        animation-range: 25% normal;
         > a {
           scale: var(--h1-scale, 1);
         }
@@ -1466,10 +1466,14 @@ div[category] {
 @keyframes mobile-header-h1 {
   0% {
     --h1-scale: calc(90vw / 12rem);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     gap: 0.5rem;
   }
   100% {
     --h1-scale: 1;
+    padding-top: 0px;
+    padding-bottom: 0px;
     gap: 1rem;
   }
 }
