@@ -324,17 +324,17 @@ body.gh {
     @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
       animation: mobile-header-collapse 1ms linear both;
       animation-timeline: scroll();
-      animation-range: 0vh 50svh;
+      animation-range: normal;
 
       > *:not(h1), &::before, &::after {
         animation: mobile-header-hide 1ms linear both;
         animation-timeline: scroll();
-        animation-range: 0vh 100svh;
+        animation-range: normal 50%;
       }
       > h1 {
         animation: mobile-header-h1 1ms linear both;
         animation-timeline: scroll();
-        animation-range: 0vh 50svh;
+        animation-range: normal;
 
         > a {
           scale: var(--h1-scale, 1);
@@ -396,14 +396,14 @@ body.gh {
       white-space: nowrap;
       transform-origin: inherit;
 
-      &:focus-visible:not(:hover) {
+      &:focus-visible {
         border: 0px;
         outline: var(--default-border-width) solid light-dark(var(--color-grey-200), var(--color-blue-600));
         outline-offset: var(--default-border-width);
         border-radius: var(--radius);
 
         &::before {
-          color: light-dark(var(--color-grey-500), var(--color-blue-500));
+          color: light-dark(var(--color-grey-400), var(--color-blue-500));
         }
       }
 
