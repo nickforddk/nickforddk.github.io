@@ -1257,7 +1257,7 @@ body.gh {
         text-decoration-color: light-dark(var(--white-00), var(--black-00));
         white-space: nowrap;
         transform-origin: 0px 0.5lh;
-        scale: calc(90vw / 12rem);
+        scale: min(2, calc(90vw / 12rem));
         &:focus-visible {
           border: 0px;
           outline: var(--default-border-width) solid light-dark(var(--color-grey-200), var(--color-blue-600));
