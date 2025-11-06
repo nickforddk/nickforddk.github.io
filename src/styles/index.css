@@ -379,6 +379,7 @@ body.gh {
       font-weight: 800;
       line-height: 1;
       gap: 1rem;
+      transform-origin: 0px 0.5lh;
     }
     > h1 > a {
       display: flex;
@@ -389,7 +390,7 @@ body.gh {
       text-decoration-color: light-dark(var(--white-00), var(--black-00));
       white-space: nowrap;
 
-      &:focus-visible {
+      &:focus-visible:not(:hover) {
         border: 0px;
         outline: var(--default-border-width) solid light-dark(var(--color-grey-200), var(--color-blue-600));
         outline-offset: var(--default-border-width);
@@ -609,6 +610,8 @@ div[category] {
     gap: 0.5rem;
   }
   100% {
+    scale: 1;
+    gap: 1rem;
   }
 }
 
