@@ -60,6 +60,7 @@
     --text-md--line-height: 1.5;
     --text-lg: calc(var(--base-unit) * 1.5);
     --text-lg--line-height: 1.25;
+    --default-border-width: max(0.1rem, 0.1em);
     --border-width-xs: 1px;
     --border-width-1: 0.125rem;
     --radius: 0.175rem;
@@ -1251,14 +1252,25 @@ body.gh {
       letter-spacing: var(--font-spacing--title);
       font-weight: 800;
       line-height: 1;
+      gap: 1rem;
     }
     > h1 > a {
       display: flex;
       flex-flow: row;
       align-items: center;
-      gap: 1rem;
+      gap: inherit;
       line-height: 1;
       text-decoration-color: light-dark(var(--white-00), var(--black-00));
+      white-space: nowrap;
+      &:focus-visible {
+        border: 0px;
+        outline: var(--default-border-width) solid light-dark(var(--color-grey-200), var(--color-blue-600));
+        outline-offset: var(--default-border-width);
+        border-radius: var(--radius);
+        &::before {
+          color: light-dark(var(--color-grey-500), var(--color-blue-500));
+        }
+      }
       &::before {
         content: "";
         mask-image: linear-gradient(45deg, #FFFFFF 50%, #FFFFFF00 50%),
@@ -1440,7 +1452,8 @@ div[category] {
 }
 @keyframes mobile-header-h1 {
   0% {
-    font-size: 10vw;
+    scale: calc(90vw / 12rem);
+    gap: 0.5rem;
   }
 }
 @keyframes mobile-header-hide {
