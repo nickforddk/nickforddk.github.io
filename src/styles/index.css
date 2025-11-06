@@ -324,7 +324,7 @@ body.gh {
     @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
       animation: mobile-header-collapse 1ms linear both;
       animation-timeline: scroll();
-      animation-range: 0vh 100svh;
+      animation-range: 0vh 50svh;
 
       > *:not(h1), &::before, &::after {
         animation: mobile-header-hide 1ms linear both;
@@ -374,6 +374,7 @@ body.gh {
     }
 
     > h1 {
+      display: flex;
       position: sticky;
       top: 1rem;
       left: 0px;
@@ -609,9 +610,11 @@ div[category] {
   }
   100% {
     padding-top: 0px;
-    /*height: calc(2rem + var(--font-size--large));*/
     height: 25svh;
-    background: light-dark(var(--white), var(--blue-pr));
+  }
+
+  50%, 100% {
+    background: light-dark(var(--color-white), var(--color-blue-700));
   }
 }
 
