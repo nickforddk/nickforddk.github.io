@@ -164,6 +164,48 @@
   --radius-1em: 1em;
   --radius-1lh: 1lh;
   --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --tw-shadow-color: oklch(from var(--color-black) l c h / 0.1);
+  --tw-inset-shadow-color: oklch(from var(--color-black) l c h / 0.1);
+  --tw-drop-shadow-color: oklch(from var(--color-black) l c h / 0.1);
+  --tw-text-shadow-color: oklch(from var(--color-black) l c h / 0.1);
+
+  --shadow-2xs: 0 1px oklch(from var(--color-black) l c h / 0.05);
+  --shadow-xs: 0 0.1rem 0.125rem 0 oklch(from var(--color-black) l c h / 0.05);
+  --shadow-sm: 0 0.1rem 0.175rem 0 oklch(from var(--color-black) l c h / 0.1), 0 0.1rem 0.125rem -0.1rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow: 0 0.125rem 0.25rem 0 oklch(from var(--color-black) l c h / 0.1), 0 0.1rem 0.2rem -0.1rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-md: 0 0.4rem 0.6rem -0.1rem oklch(from var(--color-black) l c h / 0.1), 0 0.2rem 0.4rem -0.2rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-lg: 0 1rem 1.5rem -0.3rem oklch(from var(--color-black) l c h / 0.1), 0 0.4rem 0.6rem -0.4rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-xl: 0 2rem 2.5rem -0.5rem oklch(from var(--color-black) l c h / 0.1), 0 0.8rem 1rem -0.6rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-2xl: 0 2.5rem 5rem -1.5rem oklch(from var(--color-black) l c h / 0.25);
+
+  --inset-shadow-2xs: inset 0 1px oklch(from var(--color-black) l c h / 0.05);
+  --inset-shadow-xs: inset 0 0.1rem 0.125rem 0 oklch(from var(--color-black) l c h / 0.05);
+  --inset-shadow-sm: inset 0 0.1rem 0.175rem 0 oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow: inset 0 0.125rem 0.25rem 0 oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-md: inset 0 0.4rem 0.6rem -0.1rem oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-lg: inset 0 1rem 1.5rem -0.3rem oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-xl: inset 0 2rem 2.5rem -0.5rem oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-2xl: inset 0 2.5rem 5rem -1.5rem oklch(from var(--color-black) l c h / 0.25);
+
+  --shadow-rev2xs: 0 -1px oklch(from var(--color-black) l c h / 0.05);
+  --shadow-revxs: 0 -0.1rem 0.125rem 0 oklch(from var(--color-black) l c h / 0.05);
+  --shadow-revsm: 0 -0.1rem 0.175rem 0 oklch(from var(--color-black) l c h / 0.1), 0 -0.1rem 0.125rem -0.1rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-rev: 0 -0.125rem 0.25rem 0 oklch(from var(--color-black) l c h / 0.1), 0 -0.1rem 0.2rem -0.1rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-revmd: 0 -0.4rem 0.6rem -0.1rem oklch(from var(--color-black) l c h / 0.1), 0 -0.2rem 0.4rem -0.2rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-revlg: 0 -1rem 1.5rem -0.3rem oklch(from var(--color-black) l c h / 0.1), 0 -0.4rem 0.6rem -0.4rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-revxl: 0 -2rem 2.5rem -0.5rem oklch(from var(--color-black) l c h / 0.1), 0 -0.8rem 1rem -0.6rem oklch(from var(--color-black) l c h / 0.1);
+  --shadow-rev2xl: 0 -2.5rem 5rem -1.5rem oklch(from var(--color-black) l c h / 0.25);
+
+  --inset-shadow-rev2xs: inset 0 -1px oklch(from var(--color-black) l c h / 0.05);
+  --inset-shadow-revxs: inset 0 -0.1rem 0.125rem 0 oklch(from var(--color-black) l c h / 0.05);
+  --inset-shadow-revsm: inset 0 -0.1rem 0.175rem 0 oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-rev: inset 0 -0.125rem 0.25rem 0 oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-revmd: inset 0 -0.4rem 0.6rem -0.1rem oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-revlg: inset 0 -1rem 1.5rem -0.3rem oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-revxl: inset 0 -2rem 2.5rem -0.5rem oklch(from var(--color-black) l c h / 0.1);
+  --inset-shadow-rev2xl: inset 0 -2.5rem 5rem -1.5rem oklch(from var(--color-black) l c h / 0.25);
 }
 
 @layer base {
@@ -288,7 +330,7 @@
 body.gh {
   margin: 0px;
   padding: 0px;
-  padding-top: calc(2rem + var(--font-size--large));
+  padding-top: 4rem;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -419,26 +461,43 @@ body.gh {
       transition: inherit;
       position: absolute;
       bottom: 1rem;
-      right: 0px;
-      width: 100%;
-      background: transparent;
-      border-radius: 0px;
+      right: 1rem;
       z-index: 100;
+      width: calc(100% - 2rem);
+      color: var(--color-white);
+      background: light-dark(var(--color-blue-700), var(--color-cyan-500));
+      
+      @media (hover:hover) {
+        &:hover {
+          background: var(--color-blue-600);
+        }
+      }
+      &:active {
+        background: var(--color-blue-500);
+        color: var(--color-blue-300);
+      }
 
-      &::after {
+      > span {
+        font-weight: 600;
+      }
+      
+      &::before {
         display: flex;
         content: "";
-        width: 4rem;
-        height: 4rem;
+        width: 1lh;
+        min-width: 1lh;
+        height: 1lh;
+        min-height: 1lh;
         background: currentColor;
+        scale: 0.95;
         mask-image: var(--svg--triangle-down), var(--svg--triangle-up), var(--svg--bar);
         mask-repeat: no-repeat;
-        mask-size: 4rem 2rem, 0rem 0rem, 0rem 0rem;
+        mask-size: 1lh 0.5lh, 0rem 0rem, 0rem 0rem;
         mask-position: 50% 50%, 50% 0%, 50% 100%;
         transform-origin: center;
         transition: inherit;
       }
-      }
+    }
 
     > *:not(h1, label) {
       opacity: 1;
@@ -449,7 +508,7 @@ body.gh {
       &:has(> label > input:checked) {
         --h1-scale: 1;
         padding-top: 0px;
-        height: calc(2rem + var(--font-size--large));
+        height: 4rem;
         background: light-dark(var(--color-white), var(--color-blue-700));
         
         > *:not(h1, label), &::before {
@@ -461,31 +520,38 @@ body.gh {
           > a {
             gap: 1rem;
             scale: 1;
+            line-height: 2rem;
           }
         }
 
         > label {
-          width: var(--font-size--large);
-          height: var(--font-size--large);
-          bottom: 1rem;
-          right: 1rem;
-          border-radius: 1lh;
+          line-height: 2rem;
+          width: 2rem;
+          height: 2rem;
+          padding: 0px;
+          gap: 0px;
           background: light-dark(var(--color-grey-500), var(--color-grey-400));
+          color: light-dark(var(--color-white), var(--color-blue-700));
 
-          &:hover {
-            background: light-dark(var(--color-blue-700), var(--color-white));
+          @media (hover:hover) {
+            &:hover {
+              background: light-dark(var(--color-grey-200), var(--color-blue-600));
+            }
           }
           &:active {
             background: var(--color-blue-500);
           }
 
-          &::after {
-            width: inherit;
-            height: inherit;
-            scale: 0.9;
-            mask-size: 0rem 0rem, 1rem 0.5rem, 0.75rem 0.375rem;
-            mask-position: 50% 50%, 50% 25%, 50% 75%;
-            color: light-dark(var(--color-white), var(--color-blue-700)) !important;
+          &::before {
+            scale: 0.67;
+            mask-size: 0rem 0rem, 1lh 0.5lh, 0.67lh 0.5lh;
+            mask-position: 50% 50%, 50% 0%, 50% 100%;
+          }
+
+          > span {
+            width: 0px;
+            overflow: hidden;
+            opacity: 0;
           }
         }
       }
@@ -540,7 +606,7 @@ body.gh {
 }
 
 .h-screenclip {
-  height: calc(100dvh - 2rem - var(--font-size--large));
+  height: calc(100dvh - 4rem);
 }
 .font-title-features {
   font-family: var(--font-family--title);

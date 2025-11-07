@@ -12,5 +12,8 @@
             <a href="{{ link.url }}" id="{{ link.id }}" class="pill">{{ link.title }}</a>
         {% endfor %}
     </nav>
-    <label class="flex w-full justify-center items-center cursor-pointer hover:text-blue-600 active:text-blue-500 sm:hidden"><input type="checkbox" id="nav-toggle" class="hidden" /></label>
+    <label class="flex text-base pill cursor-pointer sm:hidden">
+        <span>{{ projectsTitle }}</span>
+        <input type="checkbox" id="nav-toggle" class="hidden" />
+    </label>
 </header>

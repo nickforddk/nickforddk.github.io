@@ -27,13 +27,13 @@
                 data-carousel-slide
               >
                 <a href="{{ project.url }}"
-                    class="group/item no-underline flex flex-1 max-w-xl mx-auto text-sm bg-white text-grey-500 dark:bg-blue-900 dark:text-grey-400 hover:text-blue-800 hover:dark:text-white relative"
+                    class="group/item no-underline flex flex-1 max-w-xl mx-auto text-sm bg-white text-grey-500 dark:bg-blue-900 dark:text-grey-400 hover:text-blue-800 hover:dark:text-white active:bg-blue-100 active:dark:bg-cyan-800 inset-shadow-none active:inset-shadow-rev2xl active:inset-shadow-blue-500/10 active:dark:inset-shadow-cyan-500/10 relative"
                     style="clip-path: inset(0px round var(--radius-xl))">
                   <div class="pcover flex h-full max-h-1/2 mb-2 text-cyan-100 bg-grey-400 dark:text-grey-500 dark:bg-grey-600 group-hover/item:text-white group-hover/item:dark:text-grey-400">
                     {% if project.img %}<img src="{{ project.img }}" alt="{{ project.title }}" class="flex-1 object-cover m-0">{% endif %}
                   </div>
-                  <div class="text-xs font-semibold font-title-features rounded-1lh leading-none px-2 py-1 w-auto absolute top-4 left-4 z-10 bg-grey-500 text-white group-hover/item:bg-blue-700 group-hover/item:dark:bg-cyan-500 shadow-lg border-xs border-grey-500/25">{{ project.categoryLabel }}</div>
-                  <h3 class="text-lg leading-none px-4 text-blue-800 dark:text-white group-hover/item:text-blue-700 group-hover/item:dark:text-cyan-500">
+                  <div class="text-xs font-semibold font-title-features rounded-1lh leading-none px-2 py-1 w-auto absolute top-4 left-4 z-10 bg-grey-500 text-white group-hover/item:bg-blue-700 group-hover/item:dark:bg-cyan-500 group-active/item:bg-blue-700 group-active/item:dark:bg-cyan-500 shadow-lg border-xs border-grey-500/25">{{ project.categoryLabel }}</div>
+                  <h3 class="text-lg leading-none px-4 text-blue-800 dark:text-white group-hover/item:text-blue-700 group-hover/item:dark:text-cyan-500 group-active/item:text-blue-700 group-active/item:dark:text-cyan-500">
                     {{ project.title }}
                   </h3>
                   <p class="px-4 pb-8">{{ project.description }}</p>
