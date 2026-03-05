@@ -24,13 +24,12 @@ header-links:
 projects:
   - id: hedgpolicy2026
     category: outreach
+    url: https://hedgpolicy.sdu.dk/2026/
     img: images/policy2026.webp
     en: 
-    - url: https://hedgpolicy.sdu.dk/2026/en/
     - title: Fewer young, more elderly
     - description: Website about the demographic challenges facing Denmark in the coming decades, complementing a policy brief and event hosted by the Department of Economics at SDU
     da: 
-    - url: https://hedgpolicy.sdu.dk/2026/da/
     - title: Færre unge, flere ældre
     - description: Hjemmeside om de demografiske udfordringer, Danmark står over for i de kommende årtier, som supplement til et policy brief og arrangement, der blev afholdt af Økonomisk Institut på SDU
   - id: intoek
