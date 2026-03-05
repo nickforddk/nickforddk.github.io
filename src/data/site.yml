@@ -22,6 +22,27 @@ header-links:
     - title: SDU forskerprofil
     - url: https://portal.findresearcher.sdu.dk/da/persons/nicholas-martin-ford-2
 projects:
+  - id: hedgpolicy2026
+    category: outreach
+    img: images/policy2026.webp
+    en: 
+    - url: https://hedgpolicy.sdu.dk/2026/en/
+    - title: Fewer young, more elderly
+    - description: Website about the demographic challenges facing Denmark in the coming decades, complementing a policy brief and event hosted by the Department of Economics at SDU
+    da: 
+    - url: https://hedgpolicy.sdu.dk/2026/da/
+    - title: Færre unge, flere ældre
+    - description: Hjemmeside om de demografiske udfordringer, Danmark står over for i de kommende årtier, som supplement til et policy brief og arrangement, der blev afholdt af Økonomisk Institut på SDU
+  - id: intoek
+    category: teaching
+    url: intoek
+    img: images/intoek.webp
+    en: 
+    - title: International economics
+    - description: Data analysis and visualisation and other exercises for my undergraduate course at the University of Southern Denmark
+    da: 
+    - title: International økonomi
+    - description: Dataanalyse og visualisering samt andre øvelser til et af mine fag på Syddansk Universitet
   - id: kv150
     category: outreach
     url: KvinderKU-1875-1925
