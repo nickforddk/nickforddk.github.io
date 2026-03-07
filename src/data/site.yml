@@ -32,6 +32,16 @@ projects:
     da: 
     - title: Færre unge, flere ældre
     - description: Hjemmeside om de demografiske udfordringer, Danmark står over for i de kommende årtier, som supplement til et policy brief og arrangement, der blev afholdt af Økonomisk Institut på SDU
+  - id: sdulatex
+    category: coding
+    url: https://github.com/nickforddk/SDU-latex
+    img: images/sdu-latex.webp
+    en: 
+    - title: SDU LaTeX template
+    - description: Unofficial LaTeX template inspired by the standard (MS Word) templates for the University of Southern Denmark
+    da: 
+    - title: SDU LaTeX-skabelon
+    - description: Uofficiel LaTeX-skabelon inspireret af de standard (MS Word) skabeloner, der bruges på Syddansk Universitet
   - id: intoek
     category: teaching
     url: intoek
